@@ -1,201 +1,182 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Portifólio</title>
-    </head>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <title>Portfólio</title>
+    <style>
+
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #54025e;
+            color: #333;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        header, section {
+            background-color: #e4d6f0;
+            margin: 0 auto 25px auto;
+            padding: 25px 30px;
+            border-radius: 10px;
+            max-width: 900px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            animation: fadeIn 0.7s ease-in-out;
+        }
+
+        h1, h2, h3 {
+            color: #2c0133;
+            font-weight: 600;
+        }
+
+        h1 {
+            text-align: center;
+            border-bottom: 2px solid #4f026396;
+            padding-bottom: 15px;
+            margin-bottom: 10px;
+        }
+        
+        h2 {
+            border-left: 4px solid #8a2be2;
+            padding-left: 10px;
+        }
+
+        p {
+            text-align: justify;
+            font-weight: 300;
+            color: #444;
+        }
+        nav {
+            text-align: center;
+            padding: 10px 0 20px 0;
+        }
+
+        nav a {
+            color: #e4d6f0;
+            background-color: #8a2be2;
+            padding: 10px 20px;
+            margin: 0 10px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        nav a:hover {
+            background-color: #2c0133;
+            color: #fff;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 20px auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        #sobre-mim img {
+            max-width: 400px;
+        }
+        
+        article {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        article:hover {
+            transform: translateY(-5px) scale(1.01);
+            box-shadow: 0 8px 20px rgba(44, 1, 51, 0.2);
+        }
+        
+        article img {
+            max-width: 500px;
+            transition: filter 0.3s ease;
+        }
+
+        article img:hover {
+            filter: brightness(1.05);
+        }
+
+        hr {
+            border: 0;
+            height: 1px;
+            background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(79, 2, 99, 0.5), rgba(0, 0, 0, 0));
+            margin: 40px 0;
+        }
+
+    </style>
+</head>
 <body>
-    <h1 style="color: hsl(0, 66%, 25%);"> Título 1 - o mais importante</h1>
-    <h2 style="background-color: rgb(212, 140, 179);"> Título 2 - o segundo mais importante</h2>
-    <h3 style="border: 1px;"> Título 3 - o terceiro mais importante</h3>
-    <h4 style="font-family: cursive; font-size: 30px;"> Título 4 - o quarto mais importante</h4>
-    <h5> Título 5 - o quinto mais importante</h5>
-    <h6> Título 6 - o sexto mais importante</h6>
-   
-    <img src="/cachorro.jpg" alt="Imagem de um cachorro"
-    style="width: 300px; height: 200px; border-radius: 20px;"
-    <a href="https://www.google.com" target="=_blank">Google</a>
-        <br>
-    <a href="/pagina1.html">Clique aqui</a>
- 
-    <p> Este é um parágrafo de exemplo para o portifólio.
-        <br>
-        <br>
-        <br>
-        <b>Aqui</b> <i>você</i> pode adicionar informações sobre suas habilidades, experiências e projetos.
-    </p>
- 
-    <strong>Texto Importante</strong>
-    <br>
-    <em>Texto enfatizado</em>
-    <br>
-    <mark>Texto destacado</mark>
-    <br>
-    <small>Texto pequeno</small>
-    <br>
-    <del>Texto riscado</del>
-    <br>
-    <ins>Texto inserido</ins>
-    <br>
-    <sub>Texto subescrito</sub>
-    <br>
-    <sup>Texto sobrescrito</sup>
-    <br>
-    <h2>Diferença entre negrito (b) e strong</h2>
- 
-    O elemento <b> é usado para destacar o texto.
+
+    <header>
+        <h1>Portfólio</h1>
+        <nav>
+            <a href="#sobre-mim">Sobre mim</a>
+            <a href="#projetos">Projetos</a>
+        </nav>
+    </header>
+
+    <section id="sobre-mim">
+        <h2>Sobre mim</h2>
+
+        <img src="Imagens/dre academia.jpeg" alt="Essa sou eu">
+
+        <p>
+            Meu nome é Andressa Pocopetz Reali dos Santos, tenho 18 anos e estou em busca de descobrir meu lugar no mundo. Ao longo da minha trajetória, venho explorando diferentes áreas do conhecimento por meio de cursos e experiências diversas.
+        </p>
+        <p>
+            Atualmente, sou estudante do curso Técnico em Ciências de Dados e concluí o curso de Inglês pela Rockfeller. Já estudei Informática por um ano, pratiquei Judô e também realizei cursos na área de Artesanato.
+        </p>
+        <p>
+            Tenho interesse em três áreas bastante distintas para minha futura graduação: Programação, Nutrição e o um curso para me tornar Aeromoça. Apesar de diferentes entre si, todas essas áreas despertam em mim um forte interesse e representam possibilidades reais para o meu futuro profissional.
+        </p>
+        
+    </section>
+
+    <section id="projetos">
+        <h2>Projetos Feitos</h2>
+
+        <article>
+            <h3>Projeto 1 – Dump Tech: Desenvolvimento de um sistema de visão computacional para identificação e separação de lixo orgânico e reciclável.</h3>
+            <p>
+                No ano passado, participei com meus colegas do evento Innovation Camp, onde enfrentamos diversos desafios. Um deles consistia em desenvolver um projeto com o tema “Sustentabilidade no ambiente escolar”. A partir desse desafio, criamos o projeto Dump Tech, que consistia em uma lixeira inteligente baseada em Machine Learning e Inteligência Artificial. O objetivo era identificar automaticamente se o descarte era de lixo orgânico ou reciclável, otimizando assim o processo de separação de resíduos. Nosso projeto ficou em 3º lugar no evento, o que foi uma grande conquista e aprendizado para todos nós.
+            </p>
+            <img src="Imagens/dump tech.png" alt="Logotipo do projeto Dump Tech">
+        </article>
+
+        <hr>
+
+        <article>
+            <h3>Projeto 2 – MapZen: Desenvolvimento de um aplicativo para a promoção de saúde e bem-estar.</h3>
+            <p>
+                Neste ano, iniciei com meu grupo um novo projeto chamado MapZen. Trata-se de um aplicativo voltado para o bem-estar físico e mental das pessoas. Nosso objetivo com o MapZen é criar uma ferramenta acessível e eficiente que auxilie os usuários a cuidarem da sua saúde emocional e corporal de forma prática e integrada à tecnologia.
+            </p>
+            <img src="Imagens/mapzen slide.png" alt="Slide de apresentação do projeto MapZen">
+        </article>
+
+    </section>
+
 </body>
 </html>
- <br>
-<a href="#c1">capítulo 1</a> <br>
-<a href="#c2">capítulo 2</a> 
-
-<h2>Lista não ordenada</h2>
-<ul>
-    <li> Item 1</a></li>
-    <li> Item 2</a></li>
-    <li> Item 3</a></li>
-</ul>
-
-<h2>Lista ordenada</h2>
-<ol>
-    <li> Item 1</a></li>
-    <li> Item 2</a></li>
-    <li> Item 3</a></li>
-</ol>
-
-<br>
-<br>
-
-<h2>Tabelas</h2>
-
-<table border="1">
-    <tr>
-        <th>Nome</th>
-        <th>Idade</th>
-        <th>Cidade</th>
-    </tr>
-    <tr>
-        <td>João</td>
-        <td>25</td>
-        <td>São Paulo</td>
-    </tr>
-</table>
-<br>
-
-<h2>Meus Horários de Aula</h2>
-
-<table border="1">
-    <tr>
-        <th></th>
-        <th>Segunda</th>
-        <th>Terça</th>
-        <th>Quarta</th>
-        <th>Quinta</th>
-        <th>Sexta</th>
-    </tr>
-    <tr>
-        <td>1°</td>
-        <td>His</td>
-        <td>Qui</td>
-        <td>Art</td>
-        <td>Fis</td>
-        <td>Ingestão de Dados</td>
-    </tr>
-    <tr>
-        <td>2°</td>
-        <td>Ef</td>
-        <td>Mat</td>
-        <td>Geo</td>
-        <td>Desenvolvimente de Sistemas</td>
-        <td>Ingestão de Dados</td>
-    </tr>
-    <tr>
-        <td>3°</td> 
-        <td>Bio</td>
-        <td>Ecos Big Data</td>
-        <td>Projeto Profissional°</td>
-        <td>Desenvolvimente de Sistemas</td>
-        <td>Ingestão de Dados</td>
-    </tr>
-    <tr>
-        <td>4°</td> 
-        <td>Fil</td>
-        <td>Ecos Big Data</td>
-        <td>Projeto Profissional</td>
-        <td>Desenvolvimente de Sistemas</td>
-        <td>Ingestão de Dados</td>
-    </tr>
-    <tr>
-        <td>5°</td> 
-        <td>Ing</td>
-        <td>Ecos Big Data</td>
-        <td>Projeto Profissional</td>
-        <td>Mat</td>
-        <td>Ingestão de Dados</td>
-    </tr>
-    <tr>
-        <td>6°</td> 
-        <td>Por</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>7°</td> 
-        <td>Por</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>8°</td> 
-        <td>Soc</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>9°</td> 
-        <td>Ing Aplicado</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>10°</td> 
-        <td>Ing Aplicado</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
-</table>
-<h2 id="c1">capítulo 1</h2>
- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam mauris dolor, porta eget ligula ut, posuere venenatis justo. Donec eu dictum ipsum. Aenean ac magna sodales, placerat risus ut, bibendum nisi. Ut enim sem, cursus ut lacinia in, pellentesque non magna. Morbi volutpat lectus in urna tincidunt mollis. Fusce nec faucibus purus. Praesent eget ex et dui ultrices viverra eget et velit. Mauris lacinia, urna sit amet tristique posuere, magna mauris tincidunt libero, id varius diam lorem sit amet dolor. Duis molestie mauris at orci accumsan egestas. Nunc risus magna, ullamcorper vel sodales id, dictum quis velit. Etiam eleifend, ligula sit amet accumsan vulputate, ex diam faucibus libero, id viverra libero lorem ac dui. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Fusce vel massa mauris. Quisque vel laoreet dolor, in convallis nisl.
-
-    Sed suscipit faucibus nisi, in placerat nisl mollis nec. Suspendisse potenti. Etiam ut felis a urna gravida condimentum a pharetra mauris. Aenean eget nulla dictum, ornare ex vel, scelerisque diam. Nulla porttitor ut leo in pretium. Sed feugiat sollicitudin risus vel interdum. Sed quam ligula, imperdiet quis commodo quis, accumsan sit amet augue. Proin porttitor nisl et malesuada iaculis. Duis quis nisi suscipit, consectetur ante sit amet, suscipit diam. Nunc aliquet molestie efficitur.
-    
-    Nam interdum tempus tortor, quis cursus odio porta in. Nullam fringilla sed urna id laoreet. Donec dolor augue, porttitor sed justo vitae, posuere iaculis nisl. Quisque eros quam, egestas sit amet tincidunt id, bibendum accumsan mauris. Nam non magna at mauris ultricies maximus eget sed elit. Aenean vel massa faucibus, elementum ante eu, fermentum est. Mauris in elementum diam.
-    
-    Pellentesque mattis condimentum est, condimentum lacinia ligula ultrices ac. Cras sapien libero, euismod et pretium non, mollis vel purus. Maecenas laoreet suscipit dictum. Donec sed nulla tellus. Suspendisse eros felis, convallis vel tellus at, facilisis euismod eros. Donec ipsum metus, scelerisque at malesuada sed, sagittis at quam. Phasellus sed ex tempor, molestie diam quis, blandit arcu. Aenean volutpat semper leo, sed sodales sem dictum nec. Sed eget sem ut mi molestie luctus in at risus. Etiam ornare lacus ac sem sodales, eget ornare eros molestie. Pellentesque nec velit leo. Aenean risus lacus, accumsan non efficitur non, imperdiet eu est. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed tristique eleifend sem et suscipit. Sed convallis massa sit amet fermentum imperdiet.
-    
-    Maecenas sed dui non massa tincidunt facilisis. Donec metus massa, condimentum nec accumsan id, tempus ac risus. Fusce vestibulum posuere felis, non venenatis metus eleifend id. Pellentesque placerat nec diam in pretium. Fusce sagittis efficitur tincidunt. Cras a interdum enim, id aliquam odio. Phasellus ultricies blandit urna, non ornare dui. Morbi id varius orci. Phasellus et tortor neque. Sed eget velit felis.</p>
- 
-    <h2 id="c2">capítulo 2</h2>
-
- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam mauris dolor, porta eget ligula ut, posuere venenatis justo. Donec eu dictum ipsum. Aenean ac magna sodales, placerat risus ut, bibendum nisi. Ut enim sem, cursus ut lacinia in, pellentesque non magna. Morbi volutpat lectus in urna tincidunt mollis. Fusce nec faucibus purus. Praesent eget ex et dui ultrices viverra eget et velit. Mauris lacinia, urna sit amet tristique posuere, magna mauris tincidunt libero, id varius diam lorem sit amet dolor. Duis molestie mauris at orci accumsan egestas. Nunc risus magna, ullamcorper vel sodales id, dictum quis velit. Etiam eleifend, ligula sit amet accumsan vulputate, ex diam faucibus libero, id viverra libero lorem ac dui. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Fusce vel massa mauris. Quisque vel laoreet dolor, in convallis nisl.
-
-    Sed suscipit faucibus nisi, in placerat nisl mollis nec. Suspendisse potenti. Etiam ut felis a urna gravida condimentum a pharetra mauris. Aenean eget nulla dictum, ornare ex vel, scelerisque diam. Nulla porttitor ut leo in pretium. Sed feugiat sollicitudin risus vel interdum. Sed quam ligula, imperdiet quis commodo quis, accumsan sit amet augue. Proin porttitor nisl et malesuada iaculis. Duis quis nisi suscipit, consectetur ante sit amet, suscipit diam. Nunc aliquet molestie efficitur.
-    
-    Nam interdum tempus tortor, quis cursus odio porta in. Nullam fringilla sed urna id laoreet. Donec dolor augue, porttitor sed justo vitae, posuere iaculis nisl. Quisque eros quam, egestas sit amet tincidunt id, bibendum accumsan mauris. Nam non magna at mauris ultricies maximus eget sed elit. Aenean vel massa faucibus, elementum ante eu, fermentum est. Mauris in elementum diam.
-    
-    Pellentesque mattis condimentum est, condimentum lacinia ligula ultrices ac. Cras sapien libero, euismod et pretium non, mollis vel purus. Maecenas laoreet suscipit dictum. Donec sed nulla tellus. Suspendisse eros felis, convallis vel tellus at, facilisis euismod eros. Donec ipsum metus, scelerisque at malesuada sed, sagittis at quam. Phasellus sed ex tempor, molestie diam quis, blandit arcu. Aenean volutpat semper leo, sed sodales sem dictum nec. Sed eget sem ut mi molestie luctus in at risus. Etiam ornare lacus ac sem sodales, eget ornare eros molestie. Pellentesque nec velit leo. Aenean risus lacus, accumsan non efficitur non, imperdiet eu est. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed tristique eleifend sem et suscipit. Sed convallis massa sit amet fermentum imperdiet.
-    
-    Maecenas sed dui non massa tincidunt facilisis. Donec metus massa, condimentum nec accumsan id, tempus ac risus. Fusce vestibulum posuere felis, non venenatis metus eleifend id. Pellentesque placerat nec diam in pretium. Fusce sagittis efficitur tincidunt. Cras a interdum enim, id aliquam odio. Phasellus ultricies blandit urna, non ornare dui. Morbi id varius orci. Phasellus et tortor neque. Sed eget velit felis.</p>
-
